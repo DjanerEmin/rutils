@@ -1,0 +1,29 @@
+---
+title: "Path functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{path_fun}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(gdfR)
+```
+
+This `path_` group includes functions related to quering, editing, or creating (file)paths and directories.
+
+-   `path_create()` - silently creates a folder structure
+-   `path_date()` - returns the date from a Sentinel-2 filename (TODO: make generic for any "date-like" patern)\
+-   `path_decompose()` `path_compose()` - (de)composes a filepath (into) from path, filename, extension
+-   `path_emsn()` - returns path to EMSN standard activation folders
+-   `path_extract()` `path_insert()` - extracts(insert) a specific string based on separator pattern
+-   `path_find()` - recursive search inside folders
+-   `path_tifs()` - shorthand for `path_find(regexp = "tif$")`
